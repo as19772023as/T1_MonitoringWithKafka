@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: metrics-consumer
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+  datasource:
+    username: mrx
+    password: 123
+    url: jdbc:postgresql://localhost:5432/mrx_db
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db.changelog/db.changelog-master.yaml
+    default-schema: t1_kafka
+
+server:
+  port: 8082
