@@ -12,8 +12,9 @@ import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
-import ru.strebkov.commonlib.dto.MetricDTO;
-import ru.strebkov.commonlib.exception.NotFoundException;
+import ru.strebkov.producermetrics.dto.MetricDTO;
+import ru.strebkov.producermetrics.exception.NotFoundException;
+
 
 import java.util.concurrent.CompletableFuture;
 
@@ -61,7 +62,7 @@ public class ProducerServiceImpl implements ProducerService {
         CompletableFuture<SendResult<Object, Object>> future = kafkaTemplate.send(topicName, metricDto);
         future.whenComplete((result, ex) -> {
             if (ex == null) {
-                log.info("Sent message= [{}] with offset=[{}]", metricDto,
+                log.info("Отправлено -- message= [{}] with offset=[{}]", metricDto,
                         result.getRecordMetadata().offset());
             } else {
                 log.info("Unable to send message= [{}]  due to: {}", metricDto,

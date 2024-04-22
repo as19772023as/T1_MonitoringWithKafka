@@ -1,6 +1,7 @@
-package ru.strebkov.commonlib.exception;
+package ru.strebkov.consumermetrics.exception;
 
 import lombok.Builder;
+
 import java.time.LocalDateTime;
 
 @Builder

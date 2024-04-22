@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.strebkov.commonlib.dto.MetricDTO;
+import ru.strebkov.consumermetrics.dto.MetricDTO;
 import ru.strebkov.consumermetrics.mapping.MappingMetricService;
 import ru.strebkov.consumermetrics.model.MetricsEntity;
 import ru.strebkov.consumermetrics.repository.MetricRepository;
@@ -20,13 +20,15 @@ import java.util.stream.Collectors;
 public class MetricsService {
 
     private final MappingMetricService mappingMetricService;
-    private  final MetricRepository repository;
+    private final MetricRepository repository;
 
 
     public MetricsEntity saveMetric(MetricDTO metric) {
+       // log.info("Начало ====================== Service save: {}", metric.toString());
+
         MetricsEntity metricsEntity = mappingMetricService.mapToMetricEntity(metric);
-        //log.info("Service объект: {}",  metricsEntity.toString());
-        return  repository.save(metricsEntity);
+        log.info("Service объект: {}",  metricsEntity.toString());
+        return repository.save(metricsEntity);
 
     }
 

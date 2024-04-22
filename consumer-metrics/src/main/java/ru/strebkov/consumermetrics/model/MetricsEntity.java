@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @Builder
@@ -32,6 +34,6 @@ public class MetricsEntity {
     private String baseUnit;
 
 //    @Embedded
-//    private MeasurementsEntity measurements;
+//    private List<MeasurementsEntity> measurements;
 
 }

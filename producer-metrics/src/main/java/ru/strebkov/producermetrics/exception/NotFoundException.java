@@ -1,4 +1,4 @@
-package ru.strebkov.commonlib.exception;
+package ru.strebkov.producermetrics.exception;
 
 public class NotFoundException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package ru.strebkov.commonlib.dto;
+package ru.strebkov.consumermetrics.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -6,10 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
-
-//@Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,6 +17,6 @@ public class MetricDTO {
     private String description;
     private String baseUnit;
 
-     // List<MeasurementsDto> measurements;
+   // List<MeasurementsDto> measurements;
 
 }

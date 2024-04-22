@@ -11,8 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import ru.strebkov.commonlib.dto.MetricDTO;
-import ru.strebkov.commonlib.exception.ErrorMessage;
+import ru.strebkov.consumermetrics.dto.MetricDTO;
+import ru.strebkov.consumermetrics.exception.ErrorMessage;
 
 import java.util.List;
 import java.util.Optional;

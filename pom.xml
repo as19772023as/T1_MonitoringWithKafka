@@ -16,7 +16,6 @@
 	<description>project_T1</description>
 	<modules>
 		<module>producer-metrics</module>
-        <module>strebkov-public-lib</module>
         <module>consumer-metrics</module>
     </modules>
 	<properties>

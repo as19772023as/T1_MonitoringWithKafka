@@ -1,4 +1,4 @@
-package ru.strebkov.commonlib.exception;
+package ru.strebkov.consumermetrics.exception;
 
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.validation.ConstraintViolationException;
