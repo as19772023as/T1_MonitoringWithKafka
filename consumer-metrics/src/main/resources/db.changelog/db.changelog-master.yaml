@@ -1,22 +1,4 @@
 databaseChangeLog:
   - include:
-      file: migrations/schema_v11_ametrics.sql
+      file: migrations/schema_v1_metrics.sql
       relativeToChangeLogFile: true
-
-
-
-#  - include:
-#      file: migrations/schema_v1_base_unit.sql
-#      relativeToChangeLogFile: true
-#  - include:
-#      file: migrations/schema_v2_metric_name.sql
-#      relativeToChangeLogFile: true
-#  - include:
-#      file: migrations/schema_v3_metrics.sql
-#      relativeToChangeLogFile: true
-#  - include:
-#      file: migrations/schema_v4_statistic.sql
-#      relativeToChangeLogFile: true
-#  - include:
-#      file: migrations/schema_v5_measurements.sql
-#      relativeToChangeLogFile: true

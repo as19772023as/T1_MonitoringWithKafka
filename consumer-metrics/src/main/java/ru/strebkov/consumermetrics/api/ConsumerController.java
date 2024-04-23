@@ -18,13 +18,10 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-//@RequiredArgsConstructor
-//@RequestMapping("/api/metrics")
 public interface ConsumerController {
 
-   // private final MetricsService metricService;
 
-    @GetMapping//("/all")
+    @GetMapping
     @Operation(summary = "Получить все  метрики")
     @ApiResponses(value = {
             @ApiResponse(
@@ -46,11 +43,10 @@ public interface ConsumerController {
                             mediaType = "application/json",
                             schema = @Schema(implementation = ErrorMessage.class)))
     })
-    public ResponseEntity<List<MetricDTO>> getAllMetrics(); //{
-        //return ResponseEntity.ok(metricService.getAllMetrics());
-   // }
+    public ResponseEntity<List<MetricDTO>> getAllMetrics();
 
-    @GetMapping //("/{id}")
+
+    @GetMapping
     @Operation(summary = "Получить метрику по id")
     @ApiResponses(value = {
             @ApiResponse(
@@ -74,7 +70,6 @@ public interface ConsumerController {
     })
     public ResponseEntity<Optional<MetricDTO>> getMetricById(
             @Parameter(description = "id метрика для получения", required = true)
-            @PathVariable Long id);   //{
-//        return ResponseEntity.ok(metricService.getMetricsById(id));
-//    }
+            @PathVariable Long id);
+
 }

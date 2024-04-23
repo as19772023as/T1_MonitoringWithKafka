@@ -28,10 +28,8 @@ public class ConsumerControllerImpl implements ConsumerController {
 
     @Override
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<MetricDTO>> getMetricById(@PathVariable("id")Long id) {
-        return new  ResponseEntity<>(metricService.getMetricsById(id), HttpStatus.OK);
+    public ResponseEntity<Optional<MetricDTO>> getMetricById(@PathVariable("id") Long id) {
+        return new ResponseEntity<>(metricService.getMetricsById(id), HttpStatus.OK);
     }
 
-    //  public ResponseEntity<Optional<MyTasksDto>> getTaskById(@PathVariable("id") Long id) {
-    //        return new ResponseEntity<>(myTaskService.getTaskById(id), HttpStatus.OK);
 }

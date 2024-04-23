@@ -3,7 +3,8 @@ spring:
     name: metrics-consumer
   jpa:
     hibernate:
-      ddl-auto: none
+    ddl-auto: none
+#    ddl-auto: update
     show-sql: true
     properties:
       hibernate:

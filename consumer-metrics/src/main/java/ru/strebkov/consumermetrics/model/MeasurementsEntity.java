@@ -6,12 +6,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//@Data
-//@Builder
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Embeddable
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Embeddable
 public class MeasurementsEntity {
+    @Column(name = "statistic")
     private String statistic;
+    @Column(name = "value")
     private Float value;
 }

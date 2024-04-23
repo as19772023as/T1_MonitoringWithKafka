@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,6 +19,6 @@ public class MetricDTO {
     private String description;
     private String baseUnit;
 
-   // List<MeasurementsDto> measurements;
+   private List<MeasurementsDto> measurements;
 
 }

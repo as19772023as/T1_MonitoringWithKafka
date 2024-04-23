@@ -24,12 +24,9 @@ public class MetricsService {
 
 
     public MetricsEntity saveMetric(MetricDTO metric) {
-       // log.info("Начало ====================== Service save: {}", metric.toString());
-
         MetricsEntity metricsEntity = mappingMetricService.mapToMetricEntity(metric);
         log.info("Service объект: {}",  metricsEntity.toString());
         return repository.save(metricsEntity);
-
     }
 
 
@@ -43,7 +40,5 @@ public class MetricsService {
         return Optional.ofNullable(mappingMetricService.mapToMetricDto(repository.findById(id)
                 .orElse(new MetricsEntity())));
     }
-//  public Optional<MyTasksDto> getTaskById(Long id) {
-//        return Optional.ofNullable(mapping.mapToMyTaskDto(myTaskRepository.findById(id)
-//                .orElseThrow(() -> new NoSuchTasksEndpointException("Такой задачи нет"))));
+
 }
